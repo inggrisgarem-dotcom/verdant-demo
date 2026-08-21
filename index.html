@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Verdant Landscaping | Lawn Care &amp; Garden Design in Millbrook Valley</title>
+<meta name="description" content="Verdant Landscaping designs, plants, and maintains residential yards across Millbrook Valley. Lawn care, garden design, hardscaping, and seasonal cleanup — free on-site quotes.">
+<link rel="canonical" href="https://inggrisgarem-dotcom.github.io/verdant-demo/">
+<meta name="robots" content="index, follow">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Verdant Landscaping | Lawn Care &amp; Garden Design in Millbrook Valley">
+<meta property="og:description" content="Design, planting, and maintenance for residential yards across Millbrook Valley. Free on-site quotes within 48 hours.">
+<meta property="og:url" content="https://inggrisgarem-dotcom.github.io/verdant-demo/">
+<meta property="og:site_name" content="Verdant Landscaping">
+<meta property="og:locale" content="en_US">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Verdant Landscaping | Lawn Care &amp; Garden Design">
+<meta name="twitter:description" content="Design, planting, and maintenance for residential yards across Millbrook Valley.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LandscapingBusiness",
+  "name": "Verdant Landscaping",
+  "description": "Residential landscaping, lawn care, garden design, and hardscaping serving Millbrook Valley and surrounding towns.",
+  "url": "https://inggrisgarem-dotcom.github.io/verdant-demo/",
+  "telephone": "+1-555-555-0142",
+  "priceRange": "$$",
+  "areaServed": [
+    {"@type": "City", "name": "Millbrook Valley"},
+    {"@type": "City", "name": "Ashford Hollow"},
+    {"@type": "City", "name": "Cedar Grove"},
+    {"@type": "City", "name": "North Linden"}
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Millbrook Valley",
+    "addressRegion": "State (demo)",
+    "addressCountry": "US"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How fast can I get a quote?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Most site visits are scheduled within 48 hours. You'll get a written estimate before any work starts."}
+    },
+    {
+      "@type": "Question",
+      "name": "Do you offer ongoing maintenance, or one-time jobs only?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Both. Weekly and biweekly maintenance plans are available, alongside one-time cleanups, installs, and hardscaping projects."}
+    },
+    {
+      "@type": "Question",
+      "name": "Which areas do you serve?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Millbrook Valley, Ashford Hollow, Cedar Grove, and North Linden. Ask if your address falls just outside these zones."}
+    }
+  ]
+}
+</script>
+
+<style>
+:root{
+  --blueprint:#132C29;
+  --blueprint-deep:#0D211E;
+  --chalk:#EEE9D8;
+  --chalk-dim:#EEE9D8B3;
+  --leaf:#B7D53D;
+  --soil:#9C7A4C;
+  --line:#EEE9D833;
+  --line-strong:#EEE9D855;
+  --err:#D97B6C;
+  --radius:2px;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--blueprint);
+  color:var(--chalk);
+  font-family:"Work Sans",Arial,sans-serif;
+  line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:1180px;margin:0 auto;padding:0 32px;}
+a{color:inherit;}
+img{max-width:100%;display:block;}
+
+.grid-bg{
+  position:fixed;inset:0;z-index:0;pointer-events:none;
+  background-image:
+    linear-gradient(var(--line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--line) 1px, transparent 1px);
+  background-size:40px 40px;
+  opacity:.5;
+}
+
+header.site{
+  position:sticky;top:0;z-index:20;
+  background:var(--blueprint-deep)F2;
+  backdrop-filter:blur(6px);
+  border-bottom:1px solid var(--line-strong);
+}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:20px 32px;max-width:1180px;margin:0 auto;}
+.logo{font-family:"Fraunces",serif;font-weight:600;font-size:1.4rem;letter-spacing:.01em;text-decoration:none;}
+.logo span{color:var(--leaf);}
+.nav-links{display:flex;gap:32px;font-size:.92rem;list-style:none;}
+.nav-links a{text-decoration:none;color:var(--chalk-dim);transition:color .2s;}
+.nav-links a:hover{color:var(--leaf);}
+.nav-cta{
+  font-family:"IBM Plex Mono",monospace;font-size:.82rem;letter-spacing:.02em;
+  border:1px solid var(--leaf);color:var(--leaf);padding:9px 18px;text-decoration:none;
+  border-radius:var(--radius);
+}
+.nav-toggle{display:none;background:none;border:1px solid var(--line-strong);color:var(--chalk);padding:8px 12px;border-radius:var(--radius);font-size:1rem;}
+
+.hero{position:relative;padding:96px 0 80px;overflow:hidden;}
+.sheet-label{
+  font-family:"IBM Plex Mono",monospace;font-size:.76rem;letter-spacing:.14em;
+  color:var(--leaf);text-transform:uppercase;margin-bottom:22px;display:flex;align-items:center;gap:10px;
+}
+.sheet-label::before{content:"";width:26px;height:1px;background:var(--leaf);display:inline-block;}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center;position:relative;z-index:2;}
+.hero h1{
+  font-family:"Fraunces",serif;font-weight:600;font-size:clamp(2.4rem,4.6vw,3.6rem);
+  line-height:1.08;letter-spacing:-.01em;margin-bottom:22px;
+}
+.hero h1 em{font-style:italic;color:var(--leaf);}
+.hero p.lede{font-size:1.08rem;color:var(--chalk-dim);max-width:46ch;margin-bottom:32px;}
+.hero-actions{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:36px;}
+.btn{
+  font-family:"IBM Plex Mono",monospace;font-size:.86rem;letter-spacing:.02em;
+  padding:14px 26px;border-radius:var(--radius);text-decoration:none;display:inline-flex;align-items:center;gap:8px;
+  transition:transform .18s ease, box-shadow .18s ease;
+}
+.btn-primary{background:var(--leaf);color:var(--blueprint-deep);font-weight:500;}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 10px 24px -8px #B7D53D66;}
+.btn-ghost{border:1px solid var(--line-strong);color:var(--chalk);}
+.btn-ghost:hover{border-color:var(--leaf);color:var(--leaf);}
+.hero-meta{display:flex;gap:28px;flex-wrap:wrap;font-family:"IBM Plex Mono",monospace;font-size:.78rem;color:var(--chalk-dim);}
+.hero-meta strong{color:var(--chalk);display:block;font-size:1.1rem;font-family:"Fraunces",serif;font-weight:600;}
+
+.sketch-panel{
+  position:relative;aspect-ratio:1/1;border:1px solid var(--line-strong);border-radius:var(--radius);
+  background:radial-gradient(ellipse at 50% 30%, #1B3A3540 0%, transparent 65%);
+}
+.sketch-panel svg{width:100%;height:100%;}
+.contour-path{
+  fill:none;stroke:var(--leaf);stroke-width:1.4;
+  stroke-dasharray:1400;stroke-dashoffset:1400;
+  animation:draw 2.6s ease forwards .3s;
+}
+.contour-path.dim{stroke:var(--chalk-dim);stroke-width:.8;stroke-dasharray:2000;stroke-dashoffset:2000;animation:draw 3.2s ease forwards .6s;}
+@keyframes draw{to{stroke-dashoffset:0;}}
+.sketch-tag{
+  position:absolute;font-family:"IBM Plex Mono",monospace;font-size:.68rem;color:var(--chalk-dim);
+  opacity:0;animation:fadein .6s ease forwards;
+}
+@keyframes fadein{to{opacity:1;}}
+
+section{padding:88px 0;border-top:1px solid var(--line-strong);position:relative;z-index:2;}
+.section-head{max-width:640px;margin-bottom:52px;}
+.section-head h2{font-family:"Fraunces",serif;font-weight:600;font-size:clamp(1.7rem,3vw,2.3rem);line-height:1.15;margin-bottom:14px;}
+.section-head p{color:var(--chalk-dim);font-size:1.02rem;}
+
+.legend{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line-strong);border-left:1px solid var(--line-strong);}
+.legend-item{background:var(--blueprint);padding:32px 28px;border-right:1px solid var(--line-strong);border-bottom:1px solid var(--line-strong);}
+.legend-mark{
+  width:34px;height:34px;border:1px solid var(--leaf);border-radius:50%;
+  display:flex;align-items:center;justify-content:center;font-family:"IBM Plex Mono",monospace;
+  color:var(--leaf);font-size:.85rem;margin-bottom:20px;
+}
+.legend-item h3{font-family:"Fraunces",serif;font-weight:600;font-size:1.15rem;margin-bottom:10px;}
+.legend-item p{color:var(--chalk-dim);font-size:.92rem;}
+.legend-item svg{width:40px;height:40px;stroke:var(--chalk-dim);fill:none;stroke-width:1.3;margin-bottom:18px;}
+
+.zones{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;}
+.zone-list{list-style:none;}
+.zone-list li{
+  display:flex;justify-content:space-between;padding:16px 0;border-bottom:1px solid var(--line);
+  font-family:"IBM Plex Mono",monospace;font-size:.9rem;
+}
+.zone-list li span:last-child{color:var(--chalk-dim);}
+.zone-map{border:1px solid var(--line-strong);border-radius:var(--radius);aspect-ratio:4/3;position:relative;overflow:hidden;}
+.zone-map svg{width:100%;height:100%;}
+
+.process{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:36px;counter-reset:step;}
+.step{position:relative;padding-top:34px;}
+.step::before{
+  counter-increment:step;content:"0" counter(step);
+  font-family:"IBM Plex Mono",monospace;font-size:.78rem;color:var(--leaf);
+  position:absolute;top:0;left:0;letter-spacing:.06em;
+}
+.step h3{font-family:"Fraunces",serif;font-weight:600;font-size:1.1rem;margin:14px 0 8px;}
+.step p{color:var(--chalk-dim);font-size:.92rem;}
+
+.faq-list{max-width:760px;}
+details{border-bottom:1px solid var(--line-strong);padding:20px 0;}
+summary{
+  cursor:pointer;font-family:"Fraunces",serif;font-weight:500;font-size:1.08rem;
+  list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;
+}
+summary::-webkit-details-marker{display:none;}
+summary::after{content:"+";font-family:"IBM Plex Mono",monospace;color:var(--leaf);font-size:1.3rem;transition:transform .2s;}
+details[open] summary::after{transform:rotate(45deg);}
+details p{color:var(--chalk-dim);margin-top:14px;font-size:.96rem;max-width:60ch;}
+
+.report{background:var(--blueprint-deep);}
+.report-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;}
+.check-list{list-style:none;}
+.check-list li{
+  display:flex;gap:14px;padding:14px 0;border-bottom:1px solid var(--line);
+  font-size:.94rem;
+}
+.check-list li .mark{color:var(--leaf);font-family:"IBM Plex Mono",monospace;flex-shrink:0;}
+.check-list li strong{display:block;margin-bottom:2px;}
+.check-list li span.note{color:var(--chalk-dim);font-size:.86rem;}
+.kw-panel{border:1px solid var(--line-strong);border-radius:var(--radius);padding:28px;}
+.kw-panel h3{font-family:"IBM Plex Mono",monospace;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--leaf);margin-bottom:18px;}
+.kw-row{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--line);font-size:.9rem;}
+.kw-row span:last-child{font-family:"IBM Plex Mono",monospace;color:var(--chalk-dim);}
+.kw-disclaimer{
+  margin-top:18px;font-family:"IBM Plex Mono",monospace;font-size:.72rem;color:var(--err);
+  border-left:2px solid var(--err);padding-left:10px;line-height:1.5;
+}
+
+footer{padding:64px 0 48px;text-align:center;border-top:1px solid var(--line-strong);}
+.disclosure{color:var(--chalk-dim);font-size:.88rem;max-width:52ch;margin:0 auto 28px;}
+.dl-btn{
+  display:inline-flex;align-items:center;gap:10px;border:1px solid var(--leaf);color:var(--leaf);
+  font-family:"IBM Plex Mono",monospace;font-size:.82rem;letter-spacing:.04em;padding:13px 24px;
+  text-decoration:none;border-radius:var(--radius);margin-bottom:28px;
+}
+.credit{font-size:.82rem;color:var(--chalk-dim);}
+.credit a{color:var(--leaf);text-decoration:underline;}
+
+@media (max-width:860px){
+  .nav-links,.nav-cta{display:none;}
+  .nav-toggle{display:block;}
+  .hero-grid{grid-template-columns:1fr;}
+  .sketch-panel{order:-1;}
+  .zones{grid-template-columns:1fr;}
+  .report-grid{grid-template-columns:1fr;}
+  .legend{grid-template-columns:1fr;}
+}
+@media (min-width:861px) and (max-width:1080px){
+  .legend{grid-template-columns:repeat(2,1fr);}
+}
+</style>
+</head>
+<body>
+<div class="grid-bg" aria-hidden="true"></div>
+
+<header class="site">
+  <nav class="nav">
+    <a href="#top" class="logo">Verdant<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#area">Service Area</a></li>
+      <li><a href="#process">Process</a></li>
+      <li><a href="#report">SEO Report</a></li>
+    </ul>
+    <a href="#contact" class="nav-cta">REQUEST A QUOTE</a>
+    <button class="nav-toggle" aria-label="Menu">☰</button>
+  </nav>
+</header>
+
+<main id="top">
+
+<section class="hero" aria-labelledby="hero-h1">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="sheet-label">Sheet 01 — Site Overview</p>
+      <h1 id="hero-h1">Your yard, <em>planned</em> before it's planted.</h1>
+      <p class="lede">Verdant designs, installs, and maintains residential landscapes across Millbrook Valley — from a single garden bed to a full-property overhaul.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-primary">Request a Quote →</a>
+        <a href="#services" class="btn btn-ghost">See Services</a>
+      </div>
+      <div class="hero-meta">
+        <div><strong>48 hrs</strong>Quote turnaround</div>
+        <div><strong>4</strong>Towns served</div>
+        <div><strong>Est. seasonal</strong>Maintenance plans</div>
+      </div>
+    </div>
+    <div class="sketch-panel" aria-hidden="true">
+      <svg viewBox="0 0 400 400">
+        <path class="contour-path dim" d="M40,220 C60,140 140,60 220,50 C300,40 360,90 360,160 C360,230 300,270 250,300 C200,330 120,340 80,300 C40,260 20,300 40,220 Z"/>
+        <path class="contour-path" d="M90,240 C100,180 160,110 220,100 C280,90 320,130 320,180 C320,230 280,260 240,280 C200,300 140,300 120,270 C100,240 80,300 90,240 Z"/>
+        <circle cx="220" cy="180" r="4" fill="#B7D53D"/>
+      </svg>
+      <span class="sketch-tag" style="top:14%;left:8%;animation-delay:1.4s;">N ↑</span>
+      <span class="sketch-tag" style="bottom:10%;right:10%;animation-delay:1.7s;">SCALE 1:120</span>
+    </div>
+  </div>
+</section>
+
+<section id="services" aria-labelledby="services-h2">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="sheet-label">Sheet 02 — Legend</p>
+      <h2 id="services-h2">Five services, one crew.</h2>
+      <p>Every zone on the property, covered by the same team — so nothing gets lost between contractors.</p>
+    </div>
+    <div class="legend">
+      <div class="legend-item">
+        <svg viewBox="0 0 40 40"><path d="M6 30 L34 30 M12 30 L12 12 L20 6 L28 12 L28 30" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <h3>Lawn Care</h3>
+        <p>Mowing, edging, fertilization, and weed control on a weekly or biweekly cycle.</p>
+      </div>
+      <div class="legend-item">
+        <svg viewBox="0 0 40 40"><circle cx="20" cy="16" r="8"/><path d="M20 24 L20 34 M12 34 L28 34" stroke-linecap="round"/></svg>
+        <h3>Garden Design</h3>
+        <p>Bed layout, plant selection, and seasonal color plans suited to your soil and light.</p>
+      </div>
+      <div class="legend-item">
+        <svg viewBox="0 0 40 40"><path d="M6 34 L6 20 L34 20 L34 34 M14 34 L14 26 L26 26 L26 34" stroke-linejoin="round"/></svg>
+        <h3>Hardscaping</h3>
+        <p>Patios, walkways, and retaining walls that hold their line for years, not seasons.</p>
+      </div>
+      <div class="legend-item">
+        <svg viewBox="0 0 40 40"><path d="M20 6 L20 26 M12 16 L20 6 L28 16" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 34 L32 34" stroke-linecap="round"/></svg>
+        <h3>Irrigation</h3>
+        <p>Zoned sprinkler design and repair, tuned to cut runoff and water bills alike.</p>
+      </div>
+      <div class="legend-item">
+        <svg viewBox="0 0 40 40"><path d="M8 8 L32 32 M32 8 L8 32" stroke-linecap="round"/></svg>
+        <h3>Seasonal Cleanup</h3>
+        <p>Spring startup and fall teardown — leaves, mulch refresh, and bed edging included.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="area" aria-labelledby="area-h2">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="sheet-label">Sheet 03 — Service Area</p>
+      <h2 id="area-h2">Four towns, one route.</h2>
+      <p>Crews are zoned by neighborhood, so scheduling stays tight and trucks stay local.</p>
+    </div>
+    <div class="zones">
+      <ul class="zone-list">
+        <li><span>Millbrook Valley</span><span>Zone A — HQ</span></li>
+        <li><span>Ashford Hollow</span><span>Zone B — 12 min</span></li>
+        <li><span>Cedar Grove</span><span>Zone C — 18 min</span></li>
+        <li><span>North Linden</span><span>Zone D — 24 min</span></li>
+      </ul>
+      <div class="zone-map" aria-hidden="true">
+        <svg viewBox="0 0 300 220">
+          <rect x="20" y="20" width="260" height="180" fill="none" stroke="#EEE9D833"/>
+          <circle cx="90" cy="70" r="5" fill="#B7D53D"/>
+          <text x="102" y="74" fill="#EEE9D8" font-family="IBM Plex Mono" font-size="10">Millbrook Valley</text>
+          <circle cx="180" cy="60" r="4" fill="#EEE9D8B3"/>
+          <text x="190" y="64" fill="#EEE9D8B3" font-family="IBM Plex Mono" font-size="9">Ashford Hollow</text>
+          <circle cx="200" cy="130" r="4" fill="#EEE9D8B3"/>
+          <text x="210" y="134" fill="#EEE9D8B3" font-family="IBM Plex Mono" font-size="9">Cedar Grove</text>
+          <circle cx="110" cy="160" r="4" fill="#EEE9D8B3"/>
+          <text x="120" y="164" fill="#EEE9D8B3" font-family="IBM Plex Mono" font-size="9">North Linden</text>
+          <path d="M90,70 L180,60 L200,130 L110,160 Z" fill="none" stroke="#B7D53D55" stroke-dasharray="4 4"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="process" aria-labelledby="process-h2">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="sheet-label">Sheet 04 — Sequence</p>
+      <h2 id="process-h2">From site visit to first mow.</h2>
+      <p>Four steps, in order — the same sequence for a garden bed or a full redesign.</p>
+    </div>
+    <div class="process">
+      <div class="step"><h3>Site Visit</h3><p>We walk the property, measure zones, and note sun, drainage, and existing plantings.</p></div>
+      <div class="step"><h3>Design &amp; Quote</h3><p>A written estimate and simple plan sketch, scoped to your budget and timeline.</p></div>
+      <div class="step"><h3>Install</h3><p>Planting, hardscaping, or irrigation work, scheduled around your week.</p></div>
+      <div class="step"><h3>Maintain</h3><p>Optional ongoing care to keep the design looking like day one.</p></div>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="faq-h2">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="sheet-label">Sheet 04B — Notes</p>
+      <h2 id="faq-h2">Common questions.</h2>
+    </div>
+    <div class="faq-list">
+      <details>
+        <summary>How fast can I get a quote?</summary>
+        <p>Most site visits are scheduled within 48 hours. You'll get a written estimate before any work starts.</p>
+      </details>
+      <details>
+        <summary>Do you offer ongoing maintenance, or one-time jobs only?</summary>
+        <p>Both. Weekly and biweekly maintenance plans are available, alongside one-time cleanups, installs, and hardscaping projects.</p>
+      </details>
+      <details>
+        <summary>Which areas do you serve?</summary>
+        <p>Millbrook Valley, Ashford Hollow, Cedar Grove, and North Linden. Ask if your address falls just outside these zones.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section id="report" class="report" aria-labelledby="report-h2">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="sheet-label">Sheet 05 — Technical Specifications</p>
+      <h2 id="report-h2">What's actually implemented on this page.</h2>
+      <p>Every item below is live on this demo — inspect the source to verify.</p>
+    </div>
+    <div class="report-grid">
+      <ul class="check-list">
+        <li><span class="mark">✓</span><div><strong>LocalBusiness + FAQPage schema</strong><span class="note">JSON-LD, valid against schema.org — check with Google's Rich Results Test.</span></div></li>
+        <li><span class="mark">✓</span><div><strong>Unique title &amp; meta description</strong><span class="note">Written for this page, not templated boilerplate.</span></div></li>
+        <li><span class="mark">✓</span><div><strong>Open Graph + Twitter Card tags</strong><span class="note">Controls how the page previews when shared.</span></div></li>
+        <li><span class="mark">✓</span><div><strong>Canonical URL</strong><span class="note">Prevents duplicate-content splitting across URL variants.</span></div></li>
+        <li><span class="mark">✓</span><div><strong>Single H1, ordered heading hierarchy</strong><span class="note">One topic per page, sections nested logically below it.</span></div></li>
+        <li><span class="mark">✓</span><div><strong>Semantic HTML5 landmarks</strong><span class="note">header / main / section / footer, not div soup.</span></div></li>
+        <li><span class="mark">✓</span><div><strong>sitemap.xml + robots.txt</strong><span class="note">Both present at the domain root, sitemap linked in robots.txt.</span></div></li>
+        <li><span class="mark">✓</span><div><strong>No render-blocking layout shift</strong><span class="note">Fonts preconnected, animation uses transform/opacity only.</span></div></li>
+      </ul>
+      <div class="kw-panel">
+        <h3>Example Target Keywords</h3>
+        <div class="kw-row"><span>landscaping millbrook valley</span><span>local</span></div>
+        <div class="kw-row"><span>lawn care near me</span><span>local</span></div>
+        <div class="kw-row"><span>garden design quote</span><span>service</span></div>
+        <div class="kw-row"><span>irrigation repair ashford hollow</span><span>local</span></div>
+        <p class="kw-disclaimer">Illustrative example only — no ranking or traffic data is claimed for this demo site.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer id="contact">
+  <p class="disclosure">Demo build by Glodigs — Verdant Landscaping is a fictional business created to demonstrate technical SEO implementation, not a real company.</p>
+  <a class="dl-btn" href="seo-checklist.pdf" download>↓ DOWNLOAD SEO CHECKLIST (.PDF)</a>
+  <p class="credit">Technical SEO build by <a href="https://inggrisgarem-dotcom.github.io/glodigs/">Glodigs</a> — Global Digital Growth Studio</p>
+</footer>
+
+</body>
+</html>

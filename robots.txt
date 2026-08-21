@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://inggrisgarem-dotcom.github.io/verdant-demo/sitemap.xml
