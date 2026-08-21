@@ -124,7 +124,21 @@ header.site{
   border:1px solid var(--leaf);color:var(--leaf);padding:9px 18px;text-decoration:none;
   border-radius:var(--radius);
 }
-.nav-toggle{display:none;background:none;border:1px solid var(--line-strong);color:var(--chalk);padding:8px 12px;border-radius:var(--radius);font-size:1rem;}
+.nav-toggle{display:none;background:none;border:1px solid var(--line-strong);color:var(--chalk);padding:8px 12px;border-radius:var(--radius);font-size:1rem;cursor:pointer;}
+.mobile-menu{
+  display:none;position:fixed;inset:0;z-index:30;background:var(--blueprint-deep);
+  padding:100px 32px 40px;flex-direction:column;gap:6px;
+}
+.mobile-menu.open{display:flex;}
+.mobile-menu a{
+  font-family:"Fraunces",serif;font-size:1.3rem;font-weight:500;color:var(--chalk);
+  text-decoration:none;padding:16px 0;border-bottom:1px solid var(--line-strong);
+}
+.mobile-menu .nav-cta{display:block;text-align:center;margin-top:24px;}
+.mobile-close{
+  position:absolute;top:20px;right:32px;background:none;border:1px solid var(--line-strong);
+  color:var(--chalk);width:40px;height:40px;border-radius:var(--radius);font-size:1.2rem;cursor:pointer;
+}
 
 .hero{position:relative;padding:96px 0 80px;overflow:hidden;}
 .sheet-label{
@@ -273,9 +287,31 @@ footer{padding:64px 0 48px;text-align:center;border-top:1px solid var(--line-str
       <li><a href="#report">SEO Report</a></li>
     </ul>
     <a href="#contact" class="nav-cta">REQUEST A QUOTE</a>
-    <button class="nav-toggle" aria-label="Menu">☰</button>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" id="menuOpen">☰</button>
   </nav>
 </header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" aria-label="Close menu" id="menuClose">✕</button>
+  <a href="#services">Services</a>
+  <a href="#area">Service Area</a>
+  <a href="#process">Process</a>
+  <a href="#report">SEO Report</a>
+  <a href="#contact" class="nav-cta">REQUEST A QUOTE</a>
+</div>
+
+<script>
+(function(){
+  var openBtn = document.getElementById('menuOpen');
+  var closeBtn = document.getElementById('menuClose');
+  var menu = document.getElementById('mobileMenu');
+  function openMenu(){ menu.classList.add('open'); openBtn.setAttribute('aria-expanded','true'); }
+  function closeMenu(){ menu.classList.remove('open'); openBtn.setAttribute('aria-expanded','false'); }
+  openBtn.addEventListener('click', openMenu);
+  closeBtn.addEventListener('click', closeMenu);
+  menu.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', closeMenu); });
+})();
+</script>
 
 <main id="top">
 
